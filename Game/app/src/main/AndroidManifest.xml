@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Created by chinmay on 11/12/16.
+ * Copyright 2016, Chinmay Relkar
+ */
+
+/**
+ * This file is part of Game.
+
+ Game is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the SomeThoughts, either version 3 of the License, or
+ (at your option) any later version.
+
+ Game is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with Game.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.somethoughts.chinmay.game">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".GameHolder.MainActivity"
+                android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Created by chinmay on 11/12/16.
+ * Copyright 2016, Chinmay Relkar
+ */
+
+/**
+ * This file is part of Game.
+
+ Game is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the SomeThoughts, either version 3 of the License, or
+ (at your option) any later version.
+
+ Game is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with Game.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:textColor="#FFF"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:elevation="8dp"
+        android:id="@+id/coin.head"
+        android:text="Toss the coin"
+        android:background="@color/colorDock"
+        android:padding="@dimen/activity_horizontal_margin"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:textAlignment="center"
+        android:textSize="60sp"
+        android:text="Welcome"
+        android:id="@+id/coin.result.textview"
+        android:layout_below="@id/coin.head"
+        android:layout_centerHorizontal="true" />
+    <LinearLayout
+        android:id="@+id/coin.docks"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:elevation="8dp"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/coin.status.textView"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:elevation="8dp"
+                android:padding="64dp"
+                android:id="@+id/coin.button.tails"
+                android:background="@drawable/tails"/>
+            <Button
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:elevation="8dp"
+                android:id="@+id/coin.button.heads"
+                android:background="@drawable/dice"/>
+        </LinearLayout>
+    </LinearLayout>
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/coin.docks"
+        android:visibility="gone"
+        android:id="@+id/coin.progressBar" />
+</RelativeLayout>

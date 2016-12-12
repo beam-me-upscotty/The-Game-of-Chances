@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Created by chinmay on 11/12/16.
+ * Copyright 2016, Chinmay Relkar
+ */
+
+/**
+ * This file is part of Game.
+
+ Game is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the SomeThoughts, either version 3 of the License, or
+ (at your option) any later version.
+
+ Game is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with Game.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:elevation="8dp"
+        android:id="@+id/dice.head"
+        android:text="Roll the Dice"
+        android:background="@color/colorDock"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:textColor="#ffffff"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textSize="60sp"
+        android:text="Push the Button"
+        android:id="@+id/dice.result.textview"
+        android:layout_below="@id/dice.head"
+        android:layout_centerHorizontal="true" />
+<!-- the button dock  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:elevation="50dp"
+        android:padding="@dimen/activity_vertical_margin"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linearLayoutButtons">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:id="@+id/result.textView.run"
+            android:textSize="25sp"
+            android:text="Here you go"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+            <Button
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:id="@+id/dice.start.button"
+                android:background="@drawable/dice"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayoutButtons"
+        android:visibility="gone"
+        android:id="@+id/dice.progressBar" />
+    <!-- end of dock -->
+</RelativeLayout>
