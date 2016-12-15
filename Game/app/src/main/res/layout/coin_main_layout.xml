@@ -33,9 +33,8 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="40sp"
-        android:elevation="8dp"
         android:id="@+id/coin.head"
-        android:text="Toss the coin"
+        android:text="@string/coin_head"
         android:background="@color/colorDock"
         android:padding="@dimen/activity_horizontal_margin"/>
     <TextView
@@ -44,7 +43,7 @@
         android:layout_margin="32dp"
         android:textAlignment="center"
         android:textSize="60sp"
-        android:text="Welcome"
+        android:text="@string/Welcome"
         android:id="@+id/coin.result.textview"
         android:layout_below="@id/coin.head"
         android:layout_centerHorizontal="true" />
@@ -53,7 +52,6 @@
         android:layout_width="match_parent"
         android:layout_alignParentBottom="true"
         android:background="@color/colorPrimary"
-        android:elevation="8dp"
         android:padding="@dimen/activity_horizontal_margin"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -68,21 +66,22 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:gravity="center"
+            style="?android:attr/buttonBarStyle"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-                android:elevation="8dp"
                 android:padding="64dp"
+                style="?android:attr/buttonBarButtonStyle"
                 android:id="@+id/coin.button.tails"
                 android:background="@drawable/tails"/>
             <Button
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-                android:elevation="8dp"
+                style="?android:attr/buttonBarButtonStyle"
                 android:id="@+id/coin.button.heads"
-                android:background="@drawable/dice"/>
+                android:background="@drawable/heads"/>
         </LinearLayout>
     </LinearLayout>
     <ProgressBar

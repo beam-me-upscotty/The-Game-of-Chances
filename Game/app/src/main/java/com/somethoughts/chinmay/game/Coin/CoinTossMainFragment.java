@@ -15,6 +15,8 @@ import android.widget.Toast;
 import com.somethoughts.chinmay.game.R;
 import java.util.Random;
 
+import static android.support.v4.content.ContextCompat.getColor;
+
 /**
  * Created by chinmay on 11/12/16.
  * Copyright 2016, Chinmay Relkar
@@ -38,6 +40,7 @@ import java.util.Random;
  */
 public class CoinTossMainFragment extends Fragment {
     View view;
+    Toast toast;
     Boolean inProgress;
     CountDownTimer countDownTimer;
     String[] toss = {"Heads", "Tails"};
@@ -85,9 +88,8 @@ public class CoinTossMainFragment extends Fragment {
 
     private void toss_it(final Boolean userChoice) {
 
-        final Toast toast = new Toast(getActivity());
         if(inProgress) {
-            toast.makeText(getActivity(),"Please Wait",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(),"Please Wait",Toast.LENGTH_SHORT).show();
             return;
         }
         final TextView textViewResult = (TextView) view.findViewById(R.id.coin_result_textview);
@@ -110,20 +112,19 @@ public class CoinTossMainFragment extends Fragment {
                         Log.v("Progress", Integer.toString(progressBar.getProgress()));
                         textViewStatus.setVisibility(View.VISIBLE);
                         textViewStatus.setText(toss[random.nextInt(2)]);
-                        textViewResult.setText("Waiting");
-                        textViewResult.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                        textViewResult.setText(getResources().getText(R.string.Waiting));
+                        textViewResult.setBackgroundColor(getColor(getActivity().getBaseContext(),R.color.colorPrimaryDark));
                     }
 
                     @Override
                     public void onFinish()
                     {
-                        toast.cancel();
                         inProgress = false;
                         if((b && userChoice) || (!b && !userChoice))
                         {
 
-                            textViewStatus.setText("Voila Voila");
-                            textViewResult.setBackgroundColor(getResources().getColor(R.color.colorWin));
+                            textViewStatus.setText(getResources().getText(R.string.Voila));
+                            textViewResult.setBackgroundColor(getColor(getActivity().getBaseContext(),R.color.colorWin));
                             if(userChoice)
                                 textViewResult.setText(toss[0]);
                             else
@@ -131,8 +132,8 @@ public class CoinTossMainFragment extends Fragment {
                         }
                         else
                         {
-                            textViewStatus.setText("Oops :|");
-                            textViewResult.setBackgroundColor(getResources().getColor(R.color.colorLose));
+                            textViewStatus.setText(getResources().getText(R.string.oops));
+                            textViewResult.setBackgroundColor(getColor(getActivity().getBaseContext(),R.color.colorLose));
                             if(userChoice)
                                 textViewResult.setText(toss[1]);
                             else

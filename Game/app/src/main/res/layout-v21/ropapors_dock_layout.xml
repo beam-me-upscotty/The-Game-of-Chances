@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Created by chinmay on 11/12/16.
+ * Copyright 2016, Chinmay Relkar
+ */
+
+/**
+ * This file is part of Game.
+
+ Game is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the SomeThoughts, either version 3 of the License, or
+ (at your option) any later version.
+
+ Game is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with Game.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/buttonPanel"
+        android:orientation="vertical"
+        >
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/Ropapors.Result.progressBar"/>
+            <TextView
+                android:id="@+id/compareTextView"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:textColor="#FFF"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textSize="25sp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/activity_horizontal_margin"
+                >
+                <Button
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:background="@drawable/stone"
+                    android:elevation="8dp"
+                    android:layout_margin="8dp"
+                    android:id="@+id/game.stone"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:layout_width="75dp"
+                    android:elevation="8dp"
+                    android:layout_height="75dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/paper"
+                    android:id="@+id/game.paper"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:layout_width="75dp"
+                    android:elevation="8dp"
+                    android:layout_margin="8dp"
+                    android:layout_height="75dp"
+                    android:background="@drawable/scissor"
+                    android:id="@+id/game.scissor"
+                    tools:ignore="ButtonStyle" />
+            </LinearLayout>
+</LinearLayout>
