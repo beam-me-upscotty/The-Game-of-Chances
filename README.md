@@ -23,8 +23,5 @@ whereas
 Dice & Coin
 have one Fragment each for their functioning.
 
-All the icons, except the dice.png
-are created by me with the help of Gimp.
 
-
-Thanks for your time. Chinmay Relkar.
+<h1>Thanks for your time. Chinmay Relkar.</h1>
