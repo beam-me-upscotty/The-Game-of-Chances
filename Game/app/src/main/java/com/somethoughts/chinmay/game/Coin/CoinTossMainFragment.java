@@ -113,7 +113,6 @@ public class CoinTossMainFragment extends Fragment {
                         textViewStatus.setVisibility(View.VISIBLE);
                         textViewStatus.setText(toss[random.nextInt(2)]);
                         textViewResult.setText(getResources().getText(R.string.Waiting));
-                        textViewResult.setBackgroundColor(getColor(getActivity().getBaseContext(),R.color.colorPrimaryDark));
                     }
 
                     @Override
@@ -124,7 +123,7 @@ public class CoinTossMainFragment extends Fragment {
                         {
 
                             textViewStatus.setText(getResources().getText(R.string.Voila));
-                            textViewResult.setBackgroundColor(getColor(getActivity().getBaseContext(),R.color.colorWin));
+                            view.setBackgroundColor(getColor(getActivity().getBaseContext(),R.color.colorWin));
                             if(userChoice)
                                 textViewResult.setText(toss[0]);
                             else
@@ -133,7 +132,7 @@ public class CoinTossMainFragment extends Fragment {
                         else
                         {
                             textViewStatus.setText(getResources().getText(R.string.oops));
-                            textViewResult.setBackgroundColor(getColor(getActivity().getBaseContext(),R.color.colorLose));
+                            view.setBackgroundColor(getColor(getActivity().getBaseContext(),R.color.colorLose));
                             if(userChoice)
                                 textViewResult.setText(toss[1]);
                             else

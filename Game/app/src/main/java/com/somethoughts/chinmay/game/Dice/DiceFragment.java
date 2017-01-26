@@ -101,10 +101,9 @@ public class DiceFragment extends Fragment {
                     @Override
                     public void onFinish() {
                         inProgress = false;
-                        textView.setBackgroundColor(getResources().getColor(R.color.colorWin));
+                        view.setBackgroundColor(getResources().getColor(R.color.colorWin));
                         textViewrun.setText("Here you go");
                         progressBar.setProgress(3000);
-                        Toast.makeText(getActivity(),"Please Wait",Toast.LENGTH_SHORT).show();
                         return;
                     }
                 }.start();

@@ -31,8 +31,6 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         tabLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         gamePager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-
-
         tabLayout.setOnTabSelectedListener(this);
     }
 

@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.somethoughts.chinmay.game.Coin.CoinTossMainFragment;
 import com.somethoughts.chinmay.game.Dice.DiceFragment;
-import com.somethoughts.chinmay.game.Ropapors.RopaporsFragment;
+import com.somethoughts.chinmay.game.Ropapor.RopaporFragment;
 
 /**
  * Created by chinmay on 11/12/16.
@@ -37,7 +37,7 @@ public class gamePagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if(position == 0)
-        return new RopaporsFragment();
+        return new RopaporFragment();
         else if (position == 1)
             return new DiceFragment();
         else

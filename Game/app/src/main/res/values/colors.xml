@@ -23,11 +23,11 @@
  -->
 
 <resources>
-    <color name="colorPrimary">#404040</color>
-    <color name="colorPrimaryDark">#40ffffff</color>
+    <color name="colorPrimary">#40404040</color>
+    <color name="colorPrimaryDark">#40000000</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorWait">#40ffffff</color>
     <color name="colorWin">#09aa09</color>
     <color name="colorLose">#FF0000</color>
-    <color name="colorDock">#40ffffff</color>
+    <color name="colorDock">#40000000</color>
 </resources>
