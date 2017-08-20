@@ -1,8 +1,8 @@
 # Game
-An android game on Rock-Paper-scissor, Coin toss and Dice roll... FOR FRAGMENTS
+An android game on Rock-Paper-scissor, Coin toss and Dice roll...
 
 I created this app to learn the concept of fragments in android 
-and to apply it in all possible ways.
+and to apply use them as tabs in a ViewPager
 
 The project has only one activity
 
@@ -24,4 +24,4 @@ Dice & Coin
 have one Fragment each for their functioning.
 
 
-<h1>Thanks for your time. Chinmay Relkar.</h1>
+#### Thanks for your time. Chinmay Relkar
